@@ -40,7 +40,6 @@ public class ItemForbiddenFruit extends Item {
 	
 	@SideOnly(Side.CLIENT)
     public boolean hasEffect(ItemStack item) {
-		
         return true;
     }
 		

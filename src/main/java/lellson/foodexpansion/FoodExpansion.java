@@ -15,10 +15,10 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION)
 public class FoodExpansion {
 
-	public static final String ClIENT_PROXY = "lellson.foodexpansion.proxy.ClientProxy";
+	public static final String CLIENT_PROXY = "lellson.foodexpansion.proxy.ClientProxy";
 	public static final String SERVER_PROXY = "lellson.foodexpansion.proxy.CommonProxy";
 
-	@SidedProxy(clientSide = ClIENT_PROXY, serverSide = SERVER_PROXY)
+	@SidedProxy(clientSide = CLIENT_PROXY, serverSide = SERVER_PROXY)
 	public static CommonProxy proxy;
 
 	@Mod.Instance(Tags.MOD_ID)
