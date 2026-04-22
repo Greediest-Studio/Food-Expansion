@@ -33,7 +33,7 @@ public class ItemForbiddenFruit extends Item {
 	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		
 		player.getFoodStats().addStats(good ? 20 : -20, good ? 20 : -20);
-		world.playSound((EntityPlayer)null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+		world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
 		
 		return new ActionResult<>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
 	}

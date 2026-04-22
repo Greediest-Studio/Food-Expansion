@@ -5,7 +5,6 @@ import java.util.List;
 
 import lellson.foodexpansion.items.ItemFoodBasic;
 import lellson.foodexpansion.items.ItemForbiddenFruit;
-import lellson.foodexpansion.items.ItemLollipop;
 import lellson.foodexpansion.items.ItemNetherWartSoup;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -41,12 +40,10 @@ public class FoodItems {
 	public static Item itemBlazeCream;
 	public static Item itemMelonSalad;
 	public static Item itemRoastedSeed;
-	public static Item itemDough;
 	public static Item itemWolfMeat;
 	public static Item itemCookedWolfMeat;
 	public static Item itemOcelotMeat;
 	public static Item itemCookedOcelotMeat;
-	public static Item itemLollipop;
 	public static Item itemForbiddenFruit;
 	public static Item itemStarvingFruit;
 	public static Item itemBeetrootNoodles;
@@ -83,13 +80,10 @@ public class FoodItems {
 		itemBlazeCream = new ItemFoodBasic("itemBlazeCream", 4, 0.4F, false, new PotionEffect[]{new PotionEffect(MobEffects.FIRE_RESISTANCE, 300, 0)}, bowl, 32);
 		itemMelonSalad = new ItemFoodBasic("itemMelonSalad", 6, 0.6F, false, bowl);
 		itemRoastedSeed = new ItemFoodBasic("itemRoastedSeed", 1, 0.1F);
-		itemDough = new Item().setTranslationKey("itemDough").setRegistryName("itemDough");
-		ITEM_LIST.add(itemDough);
 		itemWolfMeat = new ItemFoodBasic("itemWolfMeat", 2, 0.3F, true);
 		itemCookedWolfMeat = new ItemFoodBasic("itemCookedWolfMeat", 6, 0.7F, true);
 		itemOcelotMeat = new ItemFoodBasic("itemOcelotMeat", 2, 0.3F, true);
 		itemCookedOcelotMeat = new ItemFoodBasic("itemCookedOcelotMeat", 6, 0.7F, true);
-		itemLollipop = new ItemLollipop();
 		itemBeetrootNoodles = new ItemFoodBasic("itemBeetrootNoodles", 6, 0.6F, false, bowl);
 		itemParrotMeat = new ItemFoodBasic("itemParrotMeat", 2, 0.3F, true);
 		itemCookedParrotMeat = new ItemFoodBasic("itemCookedParrotMeat", 6, 0.7F, true);
