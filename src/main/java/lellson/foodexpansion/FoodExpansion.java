@@ -5,7 +5,6 @@ import lellson.foodexpansion.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -20,26 +19,17 @@ public class FoodExpansion {
 
 	@SidedProxy(clientSide = CLIENT_PROXY, serverSide = SERVER_PROXY)
 	public static CommonProxy proxy;
-
-	@Mod.Instance(Tags.MOD_ID)
-	public static FoodExpansion instance;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		FoodItems.init();
-		MinecraftForge.EVENT_BUS.register(new FoodRegistry());
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-
 		FoodRecipes.initShapelessRecipes();	
-		FoodRecipes.initSmeltingRecipes();	
-		FMLCommonHandler.instance().bus().register(instance);
-		
+		FoodRecipes.initSmeltingRecipes();
 		MinecraftForge.EVENT_BUS.register(new DropHandler());
-		
-		proxy.registerRenders();
 	}
 
 	public static CreativeTabs tabFoodExpansion = new CreativeTabs("tabFoodExpansion") {

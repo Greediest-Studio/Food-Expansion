@@ -94,11 +94,4 @@ public class FoodItems {
 		itemForbiddenFruit = new ItemForbiddenFruit("itemForbiddenFruit", true);
 		itemStarvingFruit = new ItemForbiddenFruit("itemStarvingFruit", false);
 	}
-
-	public static void renderRegistry() {
-		
-		for(Item item : ITEM_LIST) {
-			Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-		}
-	}
 }
