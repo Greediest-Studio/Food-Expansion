@@ -27,11 +27,13 @@ public class ItemFoodBasic extends ItemFood {
 		this.setTranslationKey(name);
 		this.setRegistryName(name);
 		
-		if (effects.length != 0 && !name.equals("ItemBatWing") && !name.equals("ItemCookedBatWing"))
-			this.setAlwaysEdible();
+		if (effects.length != 0 && !"ItemBatWing".equals(name) && !"ItemCookedBatWing".equals(name)) {
+            this.setAlwaysEdible();
+        }
 		
-		if (returnItem != null)
-			this.setMaxStackSize(1);
+		if (returnItem != null) {
+            this.setMaxStackSize(1);
+        }
 		
 		this.effects = effects;
 		this.probability = probability;
@@ -74,8 +76,9 @@ public class ItemFoodBasic extends ItemFood {
 	        this.onFoodEaten(stack, world, player);
 	        player.addStat(StatList.getObjectUseStats(this));
 	        
-	        if (player instanceof EntityPlayerMP)
-	            CriteriaTriggers.CONSUME_ITEM.trigger((EntityPlayerMP)player, stack);
+	        if (player instanceof EntityPlayerMP) {
+                CriteriaTriggers.CONSUME_ITEM.trigger((EntityPlayerMP)player, stack);
+            }
 		}
         
         for (PotionEffect effect : effects) 

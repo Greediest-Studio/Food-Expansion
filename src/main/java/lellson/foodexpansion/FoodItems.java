@@ -6,8 +6,6 @@ import java.util.List;
 import lellson.foodexpansion.items.ItemFoodBasic;
 import lellson.foodexpansion.items.ItemForbiddenFruit;
 import lellson.foodexpansion.items.ItemNetherWartSoup;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;

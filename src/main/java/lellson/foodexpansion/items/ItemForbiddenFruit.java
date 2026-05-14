@@ -38,7 +38,9 @@ public class ItemForbiddenFruit extends Item {
 		return new ActionResult<>(EnumActionResult.SUCCESS, player.getHeldItem(hand));
 	}
 	
-	@SideOnly(Side.CLIENT)
+
+    @SideOnly(Side.CLIENT)
+	@Override
     public boolean hasEffect(ItemStack item) {
         return true;
     }

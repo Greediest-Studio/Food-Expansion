@@ -56,10 +56,11 @@ public class FoodRecipes {
 	public static void addShapeless(ItemStack output, ItemStack... input) {
 		
 		List<Ingredient> ingredients = new ArrayList<>();
-		for (ItemStack stack : input)
-			ingredients.add(Ingredient.fromStacks(stack));
+		for (ItemStack stack : input) {
+            ingredients.add(Ingredient.fromStacks(stack));
+        }
 
-		GameRegistry.addShapelessRecipe(output.getItem().getRegistryName(), null, output, ingredients.toArray(new Ingredient[ingredients.size()]));
+		GameRegistry.addShapelessRecipe(output.getItem().getRegistryName(), null, output, ingredients.toArray(new Ingredient[0]));
 	}
 }
 	

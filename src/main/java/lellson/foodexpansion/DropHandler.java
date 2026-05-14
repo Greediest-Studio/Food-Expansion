@@ -33,7 +33,9 @@ public class DropHandler {
 	@SubscribeEvent
 	public void onEntityDrop(LivingDropsEvent event) {
 		EntityLivingBase entity = event.getEntityLiving();
-		if (entity.isChild()) return;
+		if (entity.isChild()) {
+            return;
+        }
 		DropData data = DROP_MAP.get(entity.getClass());
 		if (data != null) {
 			Item dropItem = entity.isBurning() ? data.cooked : data.raw;
